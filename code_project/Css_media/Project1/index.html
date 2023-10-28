@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used case of JavaScript..!!</title>
+    <style>
+
+        b{
+
+        }
+        b:hover{
+            font-size: 20px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            border: 0.01px solid rgb(106, 103, 103);
+            border-top:2px ;
+            border-radius: 10px;
+        }
+        button{
+            background-color: rgb(147, 147, 248);
+            color: rgb(18, 12, 12);
+            padding: 3px;
+            border-radius: 10px;
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+           
+            
+            
+        }
+        button:hover{
+            background-color: brown;
+            color: white;
+        }
+        .container{
+            background-color: aqua;
+            height: 350px;
+            width: 240px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 10px 6px 9px ;
+
+        }
+        .box{
+            text-align: center;
+            justify-content: center;
+            
+            
+        }
+        h1{
+
+            transition: 2s;
+        }
+        h1:hover{
+            color: red;
+            text-shadow: 2px 2px wheat;
+        }
+        .btn-reset{
+              background-color: rgb(255, 246, 122);
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 4px;
+              margin-left: 0px;
+              position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Addtion of two number </h1>
+            <b>Enter first number : </b><input type="text" placeholder="" id="num1"><br>
+            <b>Enter Sceond number : </b><input type="text" id="num2">
+            <br><br>
+            <button onclick="add()" >Addition</button>
+            <h2 id="result" ></h2>
+            <br>
+        <button class="btn-reset" onclick="reset()">reset</button>
+        </div>
+       
+
+    </div>
+   
+</body>
+<script>
+
+    function add()
+    {
+        let a = parseFloat(document.getElementById("num1").value); 
+        let b = parseFloat(document.getElementById("num2").value); 
+
+        var sum = (a+b);
+
+        document.getElementById("result").textContent = " Addtion is : " +sum.toFixed(2);
+    }
+
+    function reset(){
+
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+        document.getElementById("result").textContent = "";
+    }
+</script>
+</html>
